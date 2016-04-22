@@ -8,6 +8,7 @@ echo "Run Time: $(date) @ $(hostname)"
 h1="/home/brian"
 
 # Git Operations
+# I'm not toggling '-A' on the add command so I don't accidentally delete anything here.
 echo "*** Starting Git Stuff Now @ $(date) ***"
 cd $h1/src/simple_scripts
 git add .
