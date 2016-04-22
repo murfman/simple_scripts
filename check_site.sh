@@ -1,5 +1,6 @@
 ##!/bin/bash
 # script to check if my website is up and then to notify me via Pushbullet if it isn't.
+# Requires a file called push.token in the folder above that only holds a single line with your PushBullet API in it.
 
 # Read the token from filters
 FILE=../push.token
@@ -20,7 +21,8 @@ else # send notification push to PushBullet to let me know it is down.
 fi
 
 
-# curl call to check if site is up
+# Testing section
+#
 # if curl -s --head  --request GET http://www.mu-podcast.com | grep "200 OK" > /dev/null
 # then
 #   curl --header "Access-Token: ${line}" \
