@@ -8,34 +8,33 @@
 tput clear
 
 # move cursor
-tput cup 3 15
+tput cup 3 23
 
 # set color
 tput setaf 3
 echo "*** Murph's ***"
 tput sgr0
 
-tput cup 5 17
+tput cup 5 15
 tput rev
 echo "*** Random Password Generator ***"
 tput sgr0
 
 tput cup 7 15
 echo "What method do you want to use?"
-
-tput cup 8 15
+tput cup 8 16
 echo "1. Hash and base64 the date."
-tput cup 9 15
+tput cup 9 16
 echo "2. Use urandom."
-tput cup 10 15
+tput cup 10 16
 echo "3. Use openssl's rand function."
-tput cup 11 15
+tput cup 11 16
 echo "4. A reverse urandom"
-tput cup 12 15
+tput cup 12 16
 echo "5. Filter a string from urandom."
-tput cup 13 15
+tput cup 13 16
 echo "6. Use dd then base64."
-tput cup 14 15
+tput cup 14 16
 echo "7. MD5 the current date."
 
 tput bold
@@ -46,8 +45,10 @@ read -p "How many characters in the password?  " n1
 
 tput clear
 tput sgr0
-tput rc
+# tput rc
+tput cup 10 15
 echo "Your password is: "
+
 
 # old echo code
 #
@@ -118,3 +119,7 @@ then
 fi
 
 exit $?
+
+tput clear
+tput sgr0
+tput rc
