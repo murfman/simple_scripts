@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# include the utils.sh
+# source ./utils.sh
+
 # Random Password gnertor script with options...
 
 #new tput test code
